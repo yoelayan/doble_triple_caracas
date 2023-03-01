@@ -1,0 +1,23 @@
+<div class="resultado__content"> 
+     {% for resultado in resultados %}
+          <div class="resultado__items row">
+               <div class="resultado__item col-4">
+                    <span class="paragraph__title">
+                         {% if resultado.tipo.pk == 1 %}
+                              DOBLE TRIPLE
+                         {% elif resultado.tipo.pk == 2 %}
+                              DOBLE TERMINAL
+                         {% elif resultado.tipo.pk == 3 %}
+                              DOBLE ANIMALITO
+                         {% endif %}
+                    :</span>
+               </div>
+               <div class="resultado__item col-2">
+                    <span class="paragraph">Hora</span>
+                    <span class="paragraph__btn bg-blue">{{resultado.hora}}
+               </div>
+               {% include 'shared/concepto.html' with concepto=resultado.concepto_1 %}
+               {% include 'shared/concepto.html' with concepto=resultado.concepto_2 %}
+          </div>
+     {% endfor %}
+</div>

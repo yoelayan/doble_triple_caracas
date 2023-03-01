@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+     <section id="banner__section__1">
+          <div class="banner">
+               <img src="{% static 'img/juega_y_gana.png' %}" alt="" class="banner__img">
+          </div>
+     </section>
+     <section id="resultados" class="container-custom">
+          <div class="title">
+               <h3>RESULTADOS</h3>
+          </div>
+          <div class="sub_title">
+               <h4>LOTERÍA EN VENEZUELA</h4>
+          </div>
+     </section>
+     {% include 'parts/form-historico.html'%}
+     {% include 'shared/tabs.html' with prefix='actual' resultados_vespertino=actual_resultados_vespertino resultados_nocturno=actual_resultados_nocturno %}
+
+{% endblock %}

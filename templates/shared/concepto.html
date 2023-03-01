@@ -1,0 +1,18 @@
+<div class="resultado__item col-3 resultado__concept">
+     <div class="row">
+          <div class="col-8">
+               <span class="paragraph">
+                    {% if resultado.tipo.pk == 1 %}
+                         TRIPLE A
+                    {% elif resultado.tipo.pk == 2 %}
+                         TERMINAL A
+                    {% elif resultado.tipo.pk == 3 %}
+                         ANIMALITO A
+                    {% endif %}           
+               </span>
+          </div>
+          <div class="col-4">
+               <span class="paragraph__btn">{{concepto}}</span>
+          </div>
+     </div>
+</div>
