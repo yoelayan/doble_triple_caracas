@@ -15,6 +15,13 @@
           </div>
      </section>
      {% include 'parts/form-historico.html'%}
-     {% include 'shared/tabs.html' with prefix='actual' resultados_vespertino=actual_resultados_vespertino resultados_nocturno=actual_resultados_nocturno %}
-
+     <div class="container-custom">
+          {% include 'shared/tabs.html' with prefix='actual' resultados_vespertino=actual_resultados_vespertino resultados_nocturno=actual_resultados_nocturno %}
+     </div>
+     <section id="banner__section__1">
+          <div class="banner">
+               <img src="{% static 'img/juego_familia.jpg' %}" alt="" class="banner__img">
+          </div>
+     </section>
+     {% include 'parts/reglas.html' %}
 {% endblock %}

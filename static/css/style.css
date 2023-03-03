@@ -44,6 +44,7 @@ ul.nav{
      justify-content: center;
 }
 .title h3{
+     color:white;
      font-weight: bold;
      margin-top: 0.3rem;
      margin-bottom: 0.3rem;
@@ -59,8 +60,19 @@ ul.nav{
      font-size:1.7rem;
 }
 .nav-tabs li.nav-item{
-     width: 50%;
+     
      background-color: #2e3191;
+}
+#resultados-tabs.nav-tabs li.nav-item{
+     width: 50%;
+}
+#reglas-tabs.nav-tabs li.nav-item{
+     width: 33.33%;
+}
+hr.separator{
+     color:#62a70e;
+     border: 3px solid #62a70e;
+     opacity: 100!important;
 }
 .nav-tabs li button.nav-link{
      width: 100%;
@@ -90,6 +102,10 @@ ul.nav{
 .resultado__item{
      display: flex;
      align-items: center;
+}
+.not_results{
+     margin-left:40%;
+     padding-top:10px;
 }
 .resultado__concept{
      width: 25%;
@@ -215,4 +231,28 @@ ul.nav{
 }
 .widget__icon{
      color:white;
+}
+.reglas-content{
+     background-color: #eaeaea;
+}
+.regla-item{
+     padding:15px;
+}
+.regla-item-title{
+     font-size: 1.3rem;
+     font-weight: 700;
+}
+.regla-item-description{
+     font-size: 1rem;
+     font-weight: 300;
+     text-align: justify;
+}
+#reglas-content.tab-content{
+     margin-bottom:20px;
+}
+.resultado__content .container{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     height: 300px;
 }

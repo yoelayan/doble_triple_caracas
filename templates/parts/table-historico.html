@@ -4,8 +4,12 @@
           <th>RESULTADOS</th>
      </thead>
      <tbody>
-          <td>14/08/2022</td>
-          <td>VER RESULTADOS</td>
+          {% for resultado in resultados %}
+          <tr>
+               <td>14/08/2022</td>
+               <td>VER RESULTADOS</td>
+          </tr>
+          {% endfor %}
      </tbody>
 </table>
 <div class="paginator">

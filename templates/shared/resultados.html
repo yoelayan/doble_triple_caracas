@@ -19,5 +19,10 @@
                {% include 'shared/concepto.html' with concepto=resultado.concepto_1 %}
                {% include 'shared/concepto.html' with concepto=resultado.concepto_2 %}
           </div>
+     {% empty %}
+     <div class="container">
+          <h3 class="paragraph__title text-center">Sin resultados</h3>
+     </div>
+          
      {% endfor %}
 </div>
