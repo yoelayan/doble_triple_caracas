@@ -9,6 +9,34 @@ body{
      background-color: #2e3191;
      color: white!important;
 }
+.bg-white{
+     color:#2e3191;
+     background-color: white;
+}
+.bg-white:hover{
+     color: white;
+     background-color: #2e3191!important;
+}
+.btn.bg-blue:hover{
+     background-color: #62a70e;
+}
+#puntos-venta .btn.bg-blue:hover{
+     background-color: white;
+     color:#2e3191!important;
+}
+.btn.bg-green{
+     color:white;
+     width: 50%;
+}
+.btn.bg-green:hover{
+     background-color: #2e3191;
+}
+
+.btn-long{
+     width: 100%;
+     margin:5px;
+     border-radius: 30px;
+}
 .nav-flex{
      display: flex;
      align-items: center;
@@ -150,16 +178,7 @@ hr.separator{
      font-weight: 500;
      padding:15px
 }
-.btn.bg-blue:hover{
-     background-color: #62a70e;
-}
-.btn.bg-green{
-     color:white;
-     width: 50%;
-}
-.btn.bg-green:hover{
-     background-color: #2e3191;
-}
+
 .history-form .btn{
      width: 100%;
 }
@@ -255,4 +274,45 @@ hr.separator{
      align-items: center;
      justify-content: center;
      height: 300px;
+}
+#puntos-venta{
+     background-color: #62a70e;
+     padding-bottom: 30px;
+}
+#puntos-venta .container-custom{
+     padding-top:30px;
+     padding-bottom: 30px;
+     display:flex;
+     justify-content: center;
+     align-items: center;
+}
+.title-v2 h3{
+     color:white;
+     font-size: 3rem;
+     font-weight: bolder;
+}
+.transparent-select{
+     color:white;
+     background-color: transparent;
+     padding: 10px;
+     border: 2px solid white;
+     width: 100%;
+}
+.transparent-select option{
+     border-radius: 1px!important;
+     color:white;
+     background-color: #2e3191;
+}
+.puntos-venta-table tbody tr td{
+     color:#2e3191!important;
+}
+.puntos-venta-table tbody tr{
+     
+     background-color: white;
+}
+.puntos-venta-table tbody tr:nth-child(even){
+     background-color: #eaeaea;
+}
+.ml-0{
+     width: 100%;
 }

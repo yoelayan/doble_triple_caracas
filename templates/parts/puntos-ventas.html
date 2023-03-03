@@ -1,0 +1,74 @@
+<section id="puntos-venta">
+     <div class="container-custom">
+          <div class="title-v2">
+               <h3 class="white">PUNTOS COMERCIALES DOBLETRIPLECARACAS</h3>
+          </div>
+     </div>
+     <div class="container">
+          <form action="./#puntos-venta" method="GET">
+               <div class="row">
+                         <div class="col-lg-6">
+                              <div class="row">
+                                   <div class="col-lg-12">
+                                        <select class="transparent-select" name="ciudad" id="">
+                                             <option>SELECCIONA UNA OPCIÓN</option>
+                                             {% for ciudad in ciudades %}
+                                                  <option value="{{ciudad.id}}">{{ciudad.description}}</option>
+                                             {% endfor %}
+                                        </select>
+                                   </div>
+                              </div>
+                         </div>
+                         <div class="col-lg-6">
+                              <div class="row">
+                                   <div class="col-lg-6">
+                                        <button type="submit" class="btn bg-blue btn-long"> BUSCAR </button>
+                                   </div>
+                                   <div class="col-lg-6">
+                                        <a href="/#puntos-venta" class="btn bg-white btn-long"> LIMPIAR </a>
+                                   </div>
+                              </div>
+                         </div>
+               </div>
+          </form>
+          <table class="table table-striped puntos-venta-table">
+               <thead>
+                    <th>CIUDAD / MUNICIPIO</th>
+                    <th>DIRECCIÓN</th>
+                    <th>NOMBRE LOCAL</th>
+               </thead>
+               <tbody>
+                    {% for punto in puntos_venta %}
+                         <tr>
+                              <td>{{punto.ciudad.description}}</td>
+                              <td>{{punto.direccion}}</td>
+                              <td>{{punto.description}}</td>
+                         </tr>
+                    {% endfor %}
+               </tbody>
+          </table>
+          <div class="row">
+               <div class="col-lg-5">
+                    <button class="btn bg-blue btn-long"> QUIERO SER VENDEDOR </button>
+               </div>
+               <div class="col-lg-7">
+                    <div class="row align-items-center" style="justify-content: space-evenly;">
+                         <div class="col-lg-4">
+                              {% if puntos_venta.has_previous %}
+                                   <a href="?page={{ puntos_venta.previous_page_number }}" class="btn bg-blue ml-0">ANTERIOR</a>
+                              {% endif %}
+                         </div>
+                         {% if puntos_venta.has_next %}
+                         <div class="col-lg-4">
+                              <a href="?page={{ puntos_venta.next_page_number }}" class="btn bg-blue ml-0"> SIGUIENTE </a>
+                         </div>
+                         <div class="col-lg-4">
+                              <a href="?page={{ puntos_venta.paginator.num_pages }}" class="btn bg-blue ml-0"> ULTIMA PÁGINA &raquo;</a>
+                         </div>
+                         {% endif %}
+
+                    </div>
+               </div>
+          </div>
+     </div>
+</section>

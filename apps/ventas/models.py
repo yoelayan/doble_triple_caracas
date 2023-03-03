@@ -33,4 +33,6 @@ class PuntoVenta(CommonModel):
      direccion = models.TextField()
      vendedor = models.ForeignKey(Vendedor, related_name='puntos_de_venta', on_delete=models.CASCADE)
 
+     class Meta:
+          ordering = ['-id']
 

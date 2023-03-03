@@ -7,6 +7,6 @@ class CommonModel(models.Model):
       
       class Meta:
             abstract = True
-      
+            
       def __str__(self) -> str:
             return self.description
